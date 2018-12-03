@@ -3,6 +3,7 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var vhost = require("vhost");
+var compression = require('compression')
 var app = express();
 /**
  * Sites 
@@ -26,23 +27,35 @@ claro.use(express.urlencoded({ extended: false }));
 claro.use(cookieParser());
 claro.use(express.static(path.join(__dirname, "html/claro")));
 claro.set('view engine', 'pug');
-claro.set('views',  path.join(__dirname, 'views/claro'));
+claro.set('views', path.join(__dirname, 'views/claro'));
 
 /**
  * Routes
  */
 var indexClaro = require('./routes/claro/index');
 claro.use('/', indexClaro);
+
 /**
  * Mazda
  */
+mazda.set('view engine', 'pug');
+mazda.set('views', path.join(__dirname, 'views/mazda'));
+mazda.use(compression());
 mazda.use(logger("dev"));
 mazda.use(express.json());
 mazda.use(express.urlencoded({ extended: false }));
 mazda.use(cookieParser());
 mazda.use(express.static(path.join(__dirname, "html/mazda")));
-mazda.set('view engine', 'pug');
-mazda.set('views',  path.join(__dirname, 'views/mazda'));
+mazda.use(sassMiddleware({
+  src: path.join(__dirname, 'sass/mazda'),
+  dest: path.join(__dirname, 'html/mazda/stylesheets'),
+  indentedSyntax: false,
+  sourceMap: false,
+  outputStyle: "compressed",
+  force: true,
+  prefix: '/stylesheets',
+}));
+
 
 
 /**
@@ -62,7 +75,7 @@ tigo.use(express.urlencoded({ extended: false }));
 tigo.use(cookieParser());
 tigo.use(express.static(path.join(__dirname, "html/tigo")));
 tigo.set('view engine', 'pug');
-tigo.set('views',  path.join(__dirname, 'views/tigo'));
+tigo.set('views', path.join(__dirname, 'views/tigo'));
 
 
 /**
@@ -74,13 +87,26 @@ tigo.use('/', indexTigo);
 /**
  * Etb
  */
+app.use(compression());
 etb.use(logger("dev"));
 etb.use(express.json());
 etb.use(express.urlencoded({ extended: false }));
 etb.use(cookieParser());
 etb.use(express.static(path.join(__dirname, "html/etb")));
 etb.set('view engine', 'pug');
-etb.set('views',  path.join(__dirname, 'views/etb'));
+etb.set('views', path.join(__dirname, 'views/etb'));
+etb.use(sassMiddleware({
+  src: path.join(__dirname, 'sass/etb'),
+  dest: path.join(__dirname, 'html/etb/stylesheets'),
+  indentedSyntax: false,
+  sourceMap: false,
+  outputStyle: "compressed",
+  force: true,
+  prefix: '/stylesheets',
+}));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
 
 
 /**
