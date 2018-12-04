@@ -29,6 +29,7 @@ app.use(vhost("etb.testing", etb));
  */
 claro.set('view engine', 'html');
 claro.set('views', path.join(__dirname, 'views/claro'));
+claro.engine('html', require('ejs').renderFile);
 claro.use(helmet());
 claro.use(logger("dev"));
 claro.use(compression());
