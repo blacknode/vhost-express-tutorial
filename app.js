@@ -2,8 +2,11 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var helmet = require('helmet');
 var vhost = require("vhost");
 var compression = require('compression')
+var sassMiddleware = require('node-sass-middleware')
+
 var app = express();
 /**
  * Sites 
@@ -18,16 +21,22 @@ app.use(vhost("mazda.testing", mazda));
 app.use(vhost("tigo.testing", tigo));
 app.use(vhost("etb.testing", etb));
 
+
+
+
 /**
  * Claro
  */
+claro.set('view engine', 'html');
+claro.set('views', path.join(__dirname, 'views/claro'));
+claro.use(helmet());
 claro.use(logger("dev"));
+claro.use(compression());
 claro.use(express.json());
 claro.use(express.urlencoded({ extended: false }));
 claro.use(cookieParser());
+claro.engine('html', require('ejs').renderFile);
 claro.use(express.static(path.join(__dirname, "html/claro")));
-claro.set('view engine', 'pug');
-claro.set('views', path.join(__dirname, 'views/claro'));
 
 /**
  * Routes
@@ -35,12 +44,15 @@ claro.set('views', path.join(__dirname, 'views/claro'));
 var indexClaro = require('./routes/claro/index');
 claro.use('/', indexClaro);
 
+
+
 /**
  * Mazda
  */
 mazda.set('view engine', 'pug');
 mazda.set('views', path.join(__dirname, 'views/mazda'));
 mazda.use(compression());
+mazda.use(helmet());
 mazda.use(logger("dev"));
 mazda.use(express.json());
 mazda.use(express.urlencoded({ extended: false }));
@@ -56,13 +68,12 @@ mazda.use(sassMiddleware({
   prefix: '/stylesheets',
 }));
 
-
-
 /**
  * Routes
  */
 var indexMazda = require('./routes/mazda/index');
 mazda.use('/', indexMazda);
+
 
 
 
@@ -84,10 +95,14 @@ tigo.set('views', path.join(__dirname, 'views/tigo'));
 var indexTigo = require('./routes/tigo/index');
 tigo.use('/', indexTigo);
 
+
+
+
 /**
  * Etb
  */
-app.use(compression());
+etb.use(compression());
+etb.use(helmet());
 etb.use(logger("dev"));
 etb.use(express.json());
 etb.use(express.urlencoded({ extended: false }));
@@ -104,10 +119,6 @@ etb.use(sassMiddleware({
   force: true,
   prefix: '/stylesheets',
 }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-
 
 /**
  * Routes

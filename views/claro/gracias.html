@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> Claro moviles </title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../html/claro/css/libraries/owl.carousel.min.css">
+	<link rel="stylesheet" href="../../html/claro/css/libraries/selectize.min.css">
+	<link rel="stylesheet" href="../../html/claro/css/main.css">
+	<script src="../../html/claro/js/libraries/jquery-3.3.1.min.js"></script>
+
+    <!--
+Global site tag
+(gtag.js) - Google
+Ads: 942195477 -->
+<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	
+		ga('create', 'UA-74636437-1', 'auto');
+		ga('send', 'pageview');
+	</script>						
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5JVGBJ6');</script>
+	<!-- End Google Tag Manager -->
+	<script asyncsrc="https://www.googletagmanager.com/gtag/js?id=AW-942195477"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config','AW-942195477');
+	</script>
+	
+	<script>
+		function gtag_report_conversion(url) {
+			console.log('La URL: '+ url);
+			// var callback =	function () {
+			// 	console.log('creo variable');
+			// 	if (typeof(url) !=	'undefined') {
+			// 		window.location = url;
+			// 	}
+			// };
+			function callback(){
+				if (url != 'undefined') {
+					window.location = url; 
+				}
+			}
+			gtag('event', 'conversion', {
+				'send_to': 'AW-942195477/jY0fCIPn7I8BEJWGo8ED',	'event_callback': callback()
+			});
+			return false;
+		}
+	</script>
+
+	<!-- Event snippet for Thank You Page - Móviles conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. --> 
+
+</head>
+
+<body>
+		<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JVGBJ6"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+	<script asyncsrc="https://www.googletagmanager.com/gtag/js?id=AW-942195477"></script>
+	<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config','AW-942195477');
+	</script>
+	<!-- Preloader -->
+	<div class="loader">
+		<div class="loader__container"></div>
+			<svg class="loader__content" viewBox="25 25 50 50">
+				<circle class="loader__circular" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+				<circle class="loader__circular" cx="50" cy="50" r="15" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+				<circle class="loader__circular" cx="50" cy="50" r="10" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+			</svg>
+		</div>
+	</div>
+	<!-- End Preloader -->
+
+	<!-- Modal -->
+	<section class="modal hide">
+		<div class="modal__container">
+			<!-- Mini Box -->
+			<div class="miniBox miniBox--modal">
+				<span class="modal__close">x</span>
+				<div class="miniBox__top">
+					<h1 class="miniBox__title">¿Quieres que te llamemos?</h1>
+					<p class="miniBox__desc">Ingresa tu teléfono y te llamaremos de inmediato.</p>
+				</div>
+				<!-- Banner Form -->
+				<form action="" method="post" class="form form--banner" id="form_contacto_modal" >
+					<!-- Box Form -->
+					<div class="form__box taC">
+						<input checked type="radio" name="typePhone" value="cel" id="phone6" class="form__radio">
+						<label for="phone6" class="form__labelRadio">Teléfono Fijo</label>
+						<input type="radio" name="typePhone" value="phone" id="phone5" class="form__radio">
+						<label for="phone5" class="form__labelRadio">Celular</label>
+					</div>
+					<!-- End Box Form -->
+					<!-- Box Form -->
+					<div class="form__box">
+							<select id="select-dep_modal" required class="form__input" class="select-dep" >
+			  
+								<option selected disabled value="" >Departamento</option>
+								<option value="1">Bogotá</option>
+						  
+								<option value="7">Amazonas</option>
+								<option value="4">Antioquia</option>
+								<option value="7">Arauca</option>
+								<option value="5">Atlántico</option>
+								<option value="5">Bolívar</option>
+								<option value="8">Boyacá</option>
+								<option value="6">Caldas</option>
+								<option value="8">Caquetá</option>
+								<option value="8">Casanare</option>
+								<option value="2">Cauca</option>
+								<option value="5">Cesar</option>
+								<option value="4">Choco</option>
+								<option value="4">Córdoba</option>
+								<option value="1">Cundinamarca</option>
+							  
+								<option value="5">Guajira</option>
+								<option value="8">Guaviare</option>
+								<option value="8">Huila</option>
+								<option value="5">Magdalena</option>
+								<option value="8">Meta</option>
+								<option value="2">Nariño</option>
+								<option value="7">Nor Santander</option>
+								<option value="8">Putumayo</option>
+								<option value="6">Quindío</option>
+								  <option value="6">Risaralda</option>
+									<option value="8">S. Andres</option>
+									<option value="7">Santander</option>
+									<option value="5">Sucre</option>
+									  <option value="8">Tolima</option>
+								  <option value="2">Valle del cauca</option>
+										</select>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+							<input type="text" id="num_tel_modal" name="numtel" class="form__input" placeholder="Teléfono" required>
+						</div>
+					<!-- End Box Form -->
+					<!-- Box Form -->
+					<div class="form__box form__box--100">
+						<input type="checkbox" id="authorization3" class="form__checkbox">
+						<label for="authorization3" class="form__labelCheckbox" checked>Autorizo el envío de información de conformidad con la política de tratamiento de la información disponible para consulta en la página http://www.claro.com.co</label>
+					</div>
+					<!-- End Box Form -->
+					<!-- Box Form -->
+					<div class="form__box form__box--100 taC">
+						<button class="btn">Te llamamos</button>
+					</div>
+					<!-- End Box Form -->
+				</form>
+				<!-- End Banner Form -->
+				<!-- Banner Alert -->
+				<div class="miniBox__alert hide modal_gracias">
+					<h3 class="miniBox__alert__text">Gracias por comunicarte, te contactaremos pronto</h3>
+				</div>
+				<!-- End Banner Alert -->
+			</div>
+			<!-- Mini Box -->
+		</div>
+	</section>
+	<!-- End Modal -->
+
+	<!-- General Container -->
+	<div class="container container--general">
+		<!-- Header -->
+		<header class="header">
+			<!-- Header Top -->
+			<div class="header__top">
+				<div class="container container--limit header__container">
+					<!-- Logo -->
+					<a href="/" class="logo">
+						<img src="../../html/claro/images/logo.png" alt="">
+					</a>
+					<!-- End Logo -->
+					<!-- Btn Nav -->
+					<span class="btnNav">
+						<span class="btnNav__line"></span>
+						<span class="btnNav__line"></span>
+						<span class="btnNav__line"></span>
+					</span>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="global_tel">
+
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">BOGOTÁ:<a class="header__text"href="tel:0317428917">7428917</a></p>
+							<p class="header__text">CALI:<a class="header__text"href="tel:0324892719">4892719</a></p> 
+						</div>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">MEDELLÍN:<a class="header__text"href="tel:0346049591">6049591</a></p>
+							<p class="header__text">B/QUILLA:<a class="header__text"href="tel:0353858176">3858176</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="cartagena_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">CARTAGENA:
+								<a class="header__text"href="tel:0356932601">6932601</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="bucaramanga_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">BUCARAMANGA:
+								<a class="header__text"href="tel:0376974936">6974936</a></p> 
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="cucuta_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">CÚCUTA:
+								<a class="header__text"href="tel:0375956117">5956117</a></p> 
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="tunja_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">TUNJA:
+								<a class="header__text"href="tel:0387476144">7476144</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="ibague_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">IBAGUE:
+								<a class="header__text"href="tel:0382771305">2771305</a></p> 
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="armenia_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">ARMENIA:
+									<a class="header__text"href="tel:0367362673">7362673</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="pereira_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">PEREIRA:
+								<a class="header__text"href="tel:0363402716">3402716</a></p> 
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="manizales_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">MANIZALES:
+								<a class="header__text"href="tel:0368968171">8968171</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="santamarta_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">SANTA MARTA:
+								<a class="header__text"href="tel:0354395077">4395077</a></p>  
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="pasto_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">PASTO:
+								<a class="header__text"href="tel:0327374523">7374523</a></p> 	
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="villavicencio_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">VILLAVICENCIO:
+								<a class="header__text"href="tel:0386784586">6784586</a></p>
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="popayan_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">POPAYÁN:
+								<a class="header__text"href="tel:0328368274">8368274</a></p>		
+						</div>
+					</div>
+					<!-- End Btn Nav -->
+					<div class="header__content telefonos" style="display:none" id="neiva_tel">
+						<h1 class="header__title ttU">¡Llama Gratis!</h1>
+						<div class="header__boxes header__boxes--black">
+							<p class="header__text">NEIVA:
+								<a class="header__text"href="tel:0388631873">8631873</a></p>		
+						</div>
+					</div>
+
+						
+	
+
+				</div>
+			</div>
+			<!-- End Header Top -->
+			<!-- Header Bottom -->
+			<div class="header__bottom">
+				<div class="container container--limit header__container">
+					<!-- Nav -->
+					<nav class="nav">
+						<ul class="nav__list">
+							<!-- Nav Item -->
+							<li class="nav__list__item">
+								<a href="#portabilidad" class="nav__list__link active">Portabilidad</a>
+							</li>
+							<!-- End Nav Item -->
+						</ul>
+					</nav>
+					<!-- End Nav -->
+				</div>
+			</div>
+			<!-- End Header Bottom -->
+		</header>
+		<!-- End Header -->
+        <!-- Banner -->
+        <section class="banner" id="portabilidad">
+			<div class="container container--limit banner__container plm0 prm0">
+				<div class="banner__left">
+					<!-- <img src="images/titles/title-banner2.png" alt="" class="banner__img"> -->
+					<img src="../../html/claro/images/banner/bg-banner-navidad-celular.png" alt="" class="banner__img">
+				</div>
+				<div class="banner__right">
+					<!-- Mini Box -->
+					<div class="miniBox">
+						<img src="../../html/claro/images/banner/micro-banner.png" alt="" class="miniBox__img">
+						<img src="../../html/claro/images/banner/micro-banner--m.png" alt="" class="miniBox__img mobile">
+						<!-- Banner Form -->
+						<form action="#" method="post" class="form form--banner" id="form_contacto">
+							<!-- Box Form -->
+							<div class="form__box taC">
+								<input type="radio" name="typePhone" value="cel" id="phone3" class="form__radio" checked="">
+								<label for="phone3" class="form__labelRadio">Teléfono Fijo</label>
+								<input type="radio" name="typePhone" value="phone" id="phone4" class="form__radio">
+								<label for="phone4" class="form__labelRadio">Celular</label>
+							</div>
+							<!-- End Box Form -->
+							<!-- Box Form -->
+							<div class="form__box">
+								<select id="select-dep" class="form__input" style="display: none;">
+                  
+									<option selected="" disabled="" value="">Departamento</option>
+									<option value="1">Bogotá</option>
+							  
+									<option value="7">Amazonas</option>
+									<option value="4">Antioquia</option>
+									<option value="7">Arauca</option>
+									<option value="5">Atlántico</option>
+									<option value="5">Bolívar</option>
+									<option value="8">Boyacá</option>
+									<option value="6">Caldas</option>
+									<option value="8">Caquetá</option>
+									<option value="8">Casanare</option>
+									<option value="2">Cauca</option>
+									<option value="5">Cesar</option>
+									<option value="4">Choco</option>
+									<option value="4">Córdoba</option>
+									<option value="1">Cundinamarca</option>
+								  
+									<option value="5">Guajira</option>
+									<option value="8">Guaviare</option>
+									<option value="8">Huila</option>
+									<option value="5">Magdalena</option>
+									<option value="8">Meta</option>
+									<option value="2">Nariño</option>
+									<option value="7">Nor Santander</option>
+									<option value="8">Putumayo</option>
+									<option value="6">Quindío</option>
+									  <option value="6">Risaralda</option>
+										<option value="8">S. Andres</option>
+										<option value="7">Santander</option>
+										<option value="5">Sucre</option>
+										  <option value="8">Tolima</option>
+									  <option value="2">Valle del cauca</option>
+											</select>
+							</div>
+							<!-- End Box Form -->
+							<!-- Box Form -->
+							<div class="form__box">
+								<input type="text" id="num_tel" name="numtel" class="form__input" placeholder="Teléfono" required="">
+							</div>
+							<!-- End Box Form -->
+							<!-- Box Form -->
+							<div class="form__box form__box--100">
+								<input type="checkbox" id="authorization2" class="form__checkbox">
+								<label for="authorization2" class="form__labelCheckbox">Autorizo el envío de información de conformidad con la política de tratamiento de la información disponible para consulta en la página http://www.claro.com.co</label>
+							</div>
+							<!-- End Box Form -->
+							<!-- Box Form -->
+							<div class="form__box form__box--100 taC">
+								<button class="btn">Te llamamos</button>
+							</div>
+							<!-- End Box Form -->
+						</form>
+						<!-- End Banner Form -->
+						<!-- Banner Alert -->
+						<div class="miniBox__alert gracias_principal">
+							<h3 class="miniBox__alert__text">Gracias por comunicarte, te contactaremos pronto</h3>
+						</div>
+						<!-- End Banner Alert -->
+					</div>
+					<!-- Mini Box -->
+				</div>
+			</div>
+		</section>
+		<!-- End Banner -->
+		<!-- Footer -->
+		<footer class="footer" id="registro">
+			<div class="container container--limit footer__container">
+				<div class="footer__left">
+					<h2 class="title footer__title mbm45">¿Quieres más información?</h2>
+				</div>
+				<div class="footer__right">
+					<!-- Form -->
+					<form action="#" method="post" class="form form--footer" id="form_footer">
+						<!-- Box Form -->
+						<div class="form__box">
+							<input type="text" id="from_nombre_footer" class="form__input" placeholder="*Tu nombre completo" required>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+							<input checked type="radio" name="typePhone" value="cel" id="phone1" class="form__radio">
+							<label for="phone1" class="form__labelRadio">Teléfono Fijo</label>
+							<input type="radio" name="typePhone" value="phone" id="phone2" class="form__radio">
+							<label for="phone2" class="form__labelRadio">Celular</label>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+							<input type="text" id="form_correo_footer" class="form__input" placeholder="*Tu correo" required>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+							<input type="number" id="form_telefono_footer" class="form__input" placeholder="*Tu teléfono" required>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box">
+								<select id="select-dep_footer" required class="form__input" class="select-dep" >
+			  
+										<option selected disabled value="" >Departamento</option>
+										<option value="1">Bogotá</option>
+								  
+										<option value="7">Amazonas</option>
+										<option value="4">Antioquia</option>
+										<option value="7">Arauca</option>
+										<option value="5">Atlántico</option>
+										<option value="5">Bolívar</option>
+										<option value="8">Boyacá</option>
+										<option value="6">Caldas</option>
+										<option value="8">Caquetá</option>
+										<option value="8">Casanare</option>
+										<option value="2">Cauca</option>
+										<option value="5">Cesar</option>
+										<option value="4">Choco</option>
+										<option value="4">Córdoba</option>
+										<option value="1">Cundinamarca</option>
+									  
+										<option value="5">Guajira</option>
+										<option value="8">Guaviare</option>
+										<option value="8">Huila</option>
+										<option value="5">Magdalena</option>
+										<option value="8">Meta</option>
+										<option value="2">Nariño</option>
+										<option value="7">Nor Santander</option>
+										<option value="8">Putumayo</option>
+										<option value="6">Quindío</option>
+										  <option value="6">Risaralda</option>
+											<option value="8">S. Andres</option>
+											<option value="7">Santander</option>
+											<option value="5">Sucre</option>
+											  <option value="8">Tolima</option>
+										  <option value="2">Valle del cauca</option>
+												</select>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box form__box--100">
+							<input type="checkbox" id="authorization" class="form__checkbox">
+							<label for="authorization" class="form__labelCheckbox">Autorizo el envío de información de conformidad con la política de tratamiento de la información disponible para consulta en la página http://www.claro.com.co</label>
+						</div>
+						<!-- End Box Form -->
+						<!-- Box Form -->
+						<div class="form__box form__box--100">
+							<button class="btn">Enviar</button>
+						</div>
+						<!-- End Box Form -->
+					</form>
+					<!-- End Form -->
+				
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+	</div>
+	<!-- End General Container -->
+
+	<!-- JS -->
+	<script src="../../html/claro/js/libraries/jquery-3.3.1.min.js"></script>
+	<script src="../../html/claro/js/libraries/owl.carousel.js"></script>
+	<script src="../../html/claro/js/libraries/selectize.min.js"></script>
+	<script src="../../html/claro/js/libraries/jquery.mask.min.js"></script>
+	<script src="../../html/claro/js/mainscript.js?v=1.2"></script>
+
+</body>
+</html>
