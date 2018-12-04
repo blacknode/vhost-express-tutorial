@@ -81,13 +81,25 @@ mazda.use('/', indexMazda);
 /**
  * Tigo
  */
+tigo.set('view engine', 'pug');
+tigo.set('views', path.join(__dirname, 'views/tigo'));
+tigo.use(compression());
 tigo.use(logger("dev"));
 tigo.use(express.json());
 tigo.use(express.urlencoded({ extended: false }));
 tigo.use(cookieParser());
 tigo.use(express.static(path.join(__dirname, "html/tigo")));
-tigo.set('view engine', 'pug');
-tigo.set('views', path.join(__dirname, 'views/tigo'));
+etb.use(sassMiddleware({
+  src: path.join(__dirname, 'sass'),
+  dest: path.join(__dirname, 'html/tigo/stylesheets'),
+  indentedSyntax: false,
+  sourceMap: false,
+  outputStyle: "compressed",
+  force: true,
+  prefix: '/stylesheets',
+}));
+
+
 
 
 /**
