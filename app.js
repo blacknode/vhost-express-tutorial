@@ -59,7 +59,7 @@ mazda.use(express.urlencoded({ extended: false }));
 mazda.use(cookieParser());
 mazda.use(express.static(path.join(__dirname, "html/mazda")));
 mazda.use(sassMiddleware({
-  src: path.join(__dirname, 'sass/mazda'),
+  src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'html/mazda/stylesheets'),
   indentedSyntax: false,
   sourceMap: false,
