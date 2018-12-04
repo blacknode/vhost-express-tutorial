@@ -101,6 +101,8 @@ tigo.use('/', indexTigo);
 /**
  * Etb
  */
+etb.set('view engine', 'pug');
+etb.set('views', path.join(__dirname, 'views/etb'));
 etb.use(compression());
 etb.use(helmet());
 etb.use(logger("dev"));
@@ -108,10 +110,8 @@ etb.use(express.json());
 etb.use(express.urlencoded({ extended: false }));
 etb.use(cookieParser());
 etb.use(express.static(path.join(__dirname, "html/etb")));
-etb.set('view engine', 'pug');
-etb.set('views', path.join(__dirname, 'views/etb'));
 etb.use(sassMiddleware({
-  src: path.join(__dirname, 'sass/etb'),
+  src: path.join(__dirname, 'sass'),
   dest: path.join(__dirname, 'html/etb/stylesheets'),
   indentedSyntax: false,
   sourceMap: false,
